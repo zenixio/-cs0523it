@@ -13,10 +13,15 @@ pi = math.pi
 def strToNum(str1, var, str2=-1):
     try: 
         val1 = int(str1)
+        val2 = None
         if(str2 != -1):
             val2 = int(str2)
-        var(val1,val2)
+        if(val2 != None):
+            var(val1,val2)
+        else:
+            var(val1)
     except Exception as _: 
+        print(_, "\n")
         print("Il valore inserito deve essere un numero")
 
 
