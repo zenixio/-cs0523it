@@ -62,10 +62,14 @@ def main():
 
     again = input("Digitare 1 per continuare oppure 0 per uscire : ")
 
-    if(int(again) == 1):
-        main()
-    else:
-        print("Grazie per aver utilizzato il nostro programma")
+    try:
+        if(int(again) == 1):
+            main()
+        else:
+            print("Grazie per aver utilizzato il nostro programma")
+    except:
+        print("Valore non valido")
+
 
 main()
 
