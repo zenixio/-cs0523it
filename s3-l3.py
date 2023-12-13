@@ -10,6 +10,21 @@ import math
 pi = math.pi
 
 
+def repeat():
+
+    again = input("Digitare 1 per continuare oppure 0 per uscire : ")
+
+    try:
+        if(int(again) == 1):
+            main()
+        else:
+            print("Grazie per aver utilizzato il nostro programma")
+    except:
+            print("Valore non valido")
+            repeat()
+
+
+
 def strToFloat(str1, var, str2=-1):
     try: 
         val1 = float(str1)
@@ -59,16 +74,9 @@ def main():
     else: 
         print("Si prega di digitare A o B o C\n")
 
+    repeat()
 
-    again = input("Digitare 1 per continuare oppure 0 per uscire : ")
 
-    try:
-        if(int(again) == 1):
-            main()
-        else:
-            print("Grazie per aver utilizzato il nostro programma")
-    except:
-        print("Valore non valido")
 
 
 main()
