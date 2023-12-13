@@ -10,12 +10,12 @@ import math
 pi = math.pi
 
 
-def strToNum(str1, var, str2=-1):
+def strToFloat(str1, var, str2=-1):
     try: 
-        val1 = int(str1)
+        val1 = float(str1)
         val2 = None
         if(str2 != -1):
-            val2 = int(str2)
+            val2 = float(str2)
         if(val2 != None):
             var(val1,val2)
         else:
@@ -46,16 +46,16 @@ def main():
     if(choiche.lower() == "a" or choiche == 'A'):
         print("Hai scelto l'opzione A che corrisponde al QUADRATO\n")
         lato = input("Inserire ora la lunghezza del lato (cm) per calcolare il perimetro : ")
-        strToNum(lato,perimetroQuadrato)
+        strToFloat(lato,perimetroQuadrato)
     elif(choiche.lower() == "b" or choiche == 'B'):
         print("Hai scelto l'opzione B che corrisponde al CERCHIO\n")
         r = input("Inserire ora la lunghezza del raggio (cm) per calcolare il perimetro : ")
-        strToNum(r,perimetroCerchio)
+        strToFloat(r,perimetroCerchio)
     elif(choiche.lower() == "c" or choiche == 'C'):
         print("Hai scelto l'opzione B che corrisponde al RETTANGOLO\n")
         b = input("Inserire ora la lunghezza della base (cm) per calcolare il perimetro : ")
         a = input("Inserire ora la lunghezza dell'altezza (cm) per calcolare il perimetro : ")
-        strToNum(a,perimetroRettangolo,b)
+        strToFloat(a,perimetroRettangolo,b)
     else: 
         print("Si prega di digitare A o B o C\n")
 
